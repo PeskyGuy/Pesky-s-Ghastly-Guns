@@ -5,5 +5,6 @@
   <PGG_ThingSummoningFailed>The ritual failed to summon any {0}.</PGG_ThingSummoningFailed>
   <PGG_ThingSummoningFailed_Placement>The ritual succeeded, but the summoned items could not be placed!</PGG_ThingSummoningFailed_Placement>
   <PGG_SummoningBacklashSuffered>{PAWN_nameDef} suffered psychic backlash from the summoning ritual!</PGG_SummoningBacklashSuffered>
+  <PGG_HellboarCombustion>{0} has spontaneously ignited from the Hellboar Strain!</PGG_HellboarCombustion>
 
 </LanguageData> 

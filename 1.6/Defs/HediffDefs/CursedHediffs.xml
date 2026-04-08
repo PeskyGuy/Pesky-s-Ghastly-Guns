@@ -26,13 +26,19 @@
   <HediffDef>
     <defName>PGG_HellboarStrain</defName>
     <label>hellboar strain</label>
-    <description>The weapon emanates a grating energy, causing constant minor pain but pushing the wielder to react faster.</description>
-    <hediffClass>Hediff</hediffClass>
+    <description>The weapon emanates a grating energy, causing constant minor pain but pushing the wielder to react faster. This curse sometimes causes the wielder's flesh to spontaneously ignite from intense heat.</description>
+    <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(200,80,50)</defaultLabelColor>
-    <isBad>false</isBad> 
+    <isBad>true</isBad> 
     <scenarioCanAdd>false</scenarioCanAdd> 
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <comps>
+      <li Class="Pesky.HediffCompProperties_SpontaneousCombustion">
+        <mtbDays>2</mtbDays>
+        <fireSize>0.5</fireSize>
+      </li>
+    </comps>
     <stages>
       <li>
         <minSeverity>0.01</minSeverity>
@@ -270,7 +276,7 @@
         <mentalStateGivers>
           <li>
             <mentalState>WanderConfused</mentalState>
-            <mtbDays>13</mtbDays>
+            <mtbDays>8</mtbDays>
           </li>
         </mentalStateGivers>
       </li>
@@ -289,7 +295,7 @@
         <mentalStateGivers>
           <li>
             <mentalState>WanderConfused</mentalState>
-            <mtbDays>7</mtbDays>
+            <mtbDays>4</mtbDays>
           </li>
         </mentalStateGivers>
       </li>
@@ -308,7 +314,7 @@
         <mentalStateGivers>
           <li>
             <mentalState>WanderConfused</mentalState>
-            <mtbDays>4</mtbDays>
+            <mtbDays>2</mtbDays>
           </li>
         </mentalStateGivers>
       </li>

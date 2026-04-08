@@ -7,3 +7,4 @@ D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Assembli
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Assemblies\PeskyGhastlyGuns.pdb
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.dll
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.sourcelink.json
