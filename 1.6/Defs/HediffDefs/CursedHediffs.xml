@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>PGG_ReapersHand</defName>
+    <label>reapers hand</label>
+    <description>A sense of unease and focus imparted by the weapon. Improves aim at the cost of mental stability.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.6, 0.6)</defaultLabelColor>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+          <MentalBreakThreshold>0.5</MentalBreakThreshold>
+          <PsychicSensitivity>0.5</PsychicSensitivity>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PGG_HellboarStrain</defName>
+    <label>hellboar strain</label>
+    <description>The weapon emanates a grating energy, causing constant minor pain but pushing the wielder to react faster.</description>
+    <hediffClass>Hediff</hediffClass>
+    <defaultLabelColor>(200,80,50)</defaultLabelColor>
+    <isBad>false</isBad> 
+    <scenarioCanAdd>false</scenarioCanAdd> 
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <painOffset>0.08</painOffset>
+         <statOffsets>
+          <RangedCooldownFactor>-0.2</RangedCooldownFactor> 
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+    <HediffDef>
+        <defName>PGG_VoidResonance</defName>
+        <label>void resonance</label>
+        <description>An unsettling resonance from the wave blaster fills the wielder's mind, granting unnatural speed.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.2, 0.8, 0.8)</defaultLabelColor>
+        <isBad>false</isBad>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li>
+                <label>active</label>
+                <minSeverity>1</minSeverity>
+                <capMods>
+                  <li>
+                    <capacity>Moving</capacity>
+                    <offset>0.30</offset>
+                  </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+<HediffDef>
+    <defName>PGG_ReapersMadness</defName>
+    <label>reapers madness</label>
+    <description>A strange madness that fills the wielder's mind, causing them to hear the screams of the damned.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.2, 0.2)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+     <stages>
+            <li>
+                <statOffsets>
+                    <MentalBreakThreshold>0.6</MentalBreakThreshold>
+                </statOffsets>
+                 <capMods>
+                  <li>
+                    <capacity>Consciousness</capacity>
+                    <offset>-0.2</offset>
+                  </li>
+                </capMods>
+            </li>
+        </stages>
+</HediffDef>
+
+<HediffDef>
+        <defName>PGG_NightCurse</defName>
+        <label>night curse</label>
+        <description>A curse caused by the Night Cleaver, enhancing combat abilities at night but reducing them during the day, or near light.</description>
+        <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+        <maxSeverity>1.0</maxSeverity>
+        <everCurableByItem>false</everCurableByItem>
+        <stages>
+            <li>
+                <statOffsets>
+                    <MeleeHitChanceIndoorsDarkOffset>0.5</MeleeHitChanceIndoorsDarkOffset>
+                    <MeleeDodgeChanceIndoorsDarkOffset>0.5</MeleeDodgeChanceIndoorsDarkOffset>
+                    <MeleeHitChanceOutdoorsDarkOffset>0.5</MeleeHitChanceOutdoorsDarkOffset>
+                    <MeleeDodgeChanceOutdoorsDarkOffset>0.5</MeleeDodgeChanceOutdoorsDarkOffset>
+                    <MeleeHitChanceIndoorsLitOffset>-0.5</MeleeHitChanceIndoorsLitOffset>
+                    <MeleeDodgeChanceIndoorsLitOffset>-0.5</MeleeDodgeChanceIndoorsLitOffset>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+<HediffDef>
+    <defName>PGG_Ichorous</defName>
+    <label>ichorous</label>
+    <description>A strange curse that fills the wielder's body with a liquid metal substance, causing them to become more resistant to damage and heal faster, but also extremely hungry.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+        <li>
+            <minSeverity>0.01</minSeverity>
+            <statOffsets>
+                <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+                <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            </statOffsets>
+            <hungerRateFactor>3</hungerRateFactor>
+            <regeneration>100</regeneration>
+        </li>
+    </stages>
+</HediffDef>
+
+<HediffDef>
+    <defName>PGG_VoltaicStrain</defName>
+    <label>voltaic strain</label>
+    <description>The weapon discharges excess energy into the wielder, making breathing slightly harder and causing minor discomfort.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.3, 0.8, 0.9)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+        <li>
+            <minSeverity>0.01</minSeverity>
+            <painOffset>0.05</painOffset>
+            <capMods>
+              <li>
+                <capacity>Breathing</capacity>
+                <offset>-0.15</offset>
+              </li>
+            </capMods>
+        </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PGG_VoltaicOverload</defName>
+    <label>voltaic overload</label>
+    <description>The accelerated firing mode pushes the weapon beyond safe limits, overloading the wielder's nervous system with painful energy and clouding their thoughts.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.1, 0.6, 0.9)</defaultLabelColor>
+    <isBad>true</isBad>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+        <li>
+            <minSeverity>0.01</minSeverity>
+            <painOffset>0.15</painOffset>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>-0.10</offset>
+              </li>
+            </capMods>
+        </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+      <defName>PGG_VoidAnchor</defName>
+      <label>void anchor</label>
+      <description>A strange gravitational pull from the pulse cleaver grounds the wielder, enhancing their melee stability but slowing their movement significantly.</description>
+      <hediffClass>HediffWithComps</hediffClass>
+      <defaultLabelColor>(0.8, 0.3, 0.9)</defaultLabelColor>
+      <isBad>false</isBad>
+      <scenarioCanAdd>false</scenarioCanAdd>
+      <maxSeverity>1.0</maxSeverity>
+      <everCurableByItem>false</everCurableByItem>
+      <stages>
+          <li>
+              <label>active</label>
+              <minSeverity>0.01</minSeverity>
+              <statOffsets>
+                  <MeleeHitChance>10.0</MeleeHitChance>
+                  <MeleeDodgeChance>-5.0</MeleeDodgeChance>
+              </statOffsets>
+              <capMods>
+                <li>
+                  <capacity>Moving</capacity>
+                  <offset>-0.25</offset>
+                </li>
+              </capMods>
+          </li>
+      </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PGG_InducedConfusion</defName>
+    <label>induced confusion</label>
+    <description>A state of confusion induced by the strange nature of the Duality weapon.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <minSeverity>0.01</minSeverity>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+
+ <HediffDef>
+    <defName>PGG_Momentum</defName>
+    <label>momentum</label>
+    <description>A force that pulls the wielder in a thousand directions at once. As it strengthens, movement becomes faster but the mind struggles to focus, causing confusion.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.8, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>breeze</label>
+        <minSeverity>0.01</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeDodgeChance>2.0</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+      <li>
+        <label>gust</label>
+        <minSeverity>0.30</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.20</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeDodgeChance>5.0</MeleeDodgeChance>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>13</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>windstorm</label>
+        <minSeverity>0.60</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.30</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeDodgeChance>8.0</MeleeDodgeChance>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>cyclone</label>
+        <minSeverity>0.85</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.40</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeDodgeChance>12.0</MeleeDodgeChance>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>4</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>PGG_EaglesFury</defName>
+    <label>eagle's fury</label>
+    <description>The shrieking eagle's wail echoes in the mind of the wielder, filling them with uncontrollable rage. As the effect builds, the wielder becomes increasingly prone to berserking outbursts.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.9, 0.7, 0.1)</defaultLabelColor>
+    <isBad>true</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <everCurableByItem>false</everCurableByItem>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>stirring</label>
+        <minSeverity>0.01</minSeverity>
+        <statOffsets>
+          <MeleeDamageFactor>0.1</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>25</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>agitated</label>
+        <minSeverity>0.33</minSeverity>
+        <statOffsets>
+          <MeleeDamageFactor>0.20</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.20</ShootingAccuracyPawn>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>15</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>frenzied</label>
+        <minSeverity>0.66</minSeverity>
+        <statOffsets>
+          <MeleeDamageFactor>0.30</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.30</ShootingAccuracyPawn>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>8</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+      <li>
+        <label>savage</label>
+        <minSeverity>0.90</minSeverity>
+        <statOffsets>
+          <MeleeDamageFactor>0.40</MeleeDamageFactor>
+          <ShootingAccuracyPawn>0.40</ShootingAccuracyPawn>
+        </statOffsets>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>3</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>PGG_MorningCurse</defName>
+    <label>morning curse</label>
+    <description>A curse caused by the Morning Chef, enhancing cooking skills greatly but increasing the wielder's hunger and causing them to binge food.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1.0, 0.843, 0.0)</defaultLabelColor>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <stages>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <statOffsets>
+          <CookSpeed>10</CookSpeed>
+        </statOffsets>
+        <statFactors>
+          <ButcheryFleshEfficiency>2</ButcheryFleshEfficiency>
+        </statFactors>
+        <hungerRateFactor>2</hungerRateFactor>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_Food</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

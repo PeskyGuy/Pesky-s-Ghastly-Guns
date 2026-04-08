@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<DamageDef>
+    <defName>RangedCut</defName>
+    <label>cut</label>
+    <workerClass>DamageWorker_Cut</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been cut to death.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+
+  <DamageDef>
+    <defName>RangedBlunt</defName>
+    <label>blunt</label>
+    <workerClass>DamageWorker_Blunt</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been bruised to death.</deathMessage>
+    <hediff>Crush</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+    <stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+    <isRanged>true</isRanged>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+  </DamageDef>
+</Defs>

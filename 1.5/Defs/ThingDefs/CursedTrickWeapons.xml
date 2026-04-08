@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>PGG_WaveBlaster</defName>
+        <label>wave blaster</label>
+		<graphicData>
+     		 <texPath>Things/Item/Equipment/WeaponRanged/WaveBlaster</texPath>
+     		 <graphicClass>Graphic_Single</graphicClass>
+    	</graphicData>
+        <description>This experimental firearm crackles with barely contained energy, firing crescent waves at range. However, its true potential may lie in its ability to transform into a deadly Pulse Cleaver for close-quarters combat.</description>
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Interact_ChargeLance</soundInteract>
+        <tradeability>Sellable</tradeability>
+        <destroyOnDrop>False</destroyOnDrop>
+        <statBases>
+            <WorkToMake>55000</WorkToMake>
+            <Mass>3.0</Mass>
+            <MarketValue>1200</MarketValue>
+            <SellPriceFactor>0.5</SellPriceFactor>
+            <AccuracyTouch>0.75</AccuracyTouch>
+            <AccuracyShort>0.85</AccuracyShort>
+            <AccuracyMedium>0.70</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+		<costList>
+      		<Steel>50</Steel>
+      		<ComponentIndustrial>3</ComponentIndustrial>
+      		<PGG_CursedComponent>3</PGG_CursedComponent>
+    	</costList>
+    	<recipeMaker>
+     		 <researchPrerequisite>PGG_EsotericWeaponry</researchPrerequisite>
+      		<skillRequirements>
+      		  <Crafting>8</Crafting>
+      		</skillRequirements>
+      	<displayPriority>420</displayPriority>
+		<recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PGG_CrescentWaveProj</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>32</range>
+                <burstShotCount>3</burstShotCount>
+                <soundCast>Shot_ChargeBlaster</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>    
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_PulseCleaver</weapon>
+                        <label>Transform to Cleaver</label>
+                        <description>Activate the weapon's transformation sequence to shift into its Pulse Cleaver form.</description>
+                        <ticksToTransformWeapon>60</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_VoidResonance</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>true</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>PGG_CrescentWaveProj</defName>
+        <label>crescent wave</label>
+        <graphicData>
+            <texPath>Things/Projectile/CrescentWave</texPath>
+            <shaderType>TransparentPostLight</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>RangedCut</damageDef>
+            <damageAmountBase>21</damageAmountBase>
+            <stoppingPower>2.0</stoppingPower>
+            <armorPenetrationBase>0.45</armorPenetrationBase>
+            <speed>70</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Name="PGG_BaseUncraftableMelee" Abstract="True" ParentName="BaseWeapon">
+        <techLevel>Industrial</techLevel>
+        <soundInteract>Interact_Autopistol</soundInteract>
+        <thingCategories>
+            <li>WeaponsMelee</li>
+        </thingCategories>
+        <weaponClasses>
+            <li>Melee</li>
+        </weaponClasses>
+        <smeltable>false</smeltable>
+        <tradeability>Sellable</tradeability>
+        <destroyOnDrop>False</destroyOnDrop>
+        <weaponTags>
+            <li>MeleeWeapon</li>
+            <li>SpacerMelee</li>
+        </weaponTags>
+		 <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+             <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponMelee</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+    </ThingDef>
+
+       <ThingDef Name="PGG_BaseUncraftableRanged" Abstract="True" ParentName="BaseWeapon">
+        <techLevel>Spacer</techLevel>
+        <soundInteract>Interact_ChargeLance</soundInteract>
+        <thingCategories>
+            <li>WeaponsRanged</li>
+        </thingCategories>
+        <weaponClasses>
+            <li>Ranged</li>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <smeltable>false</smeltable>
+        <tradeability>None</tradeability>
+        <destroyOnDrop>False</destroyOnDrop>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+		 <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+             <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PGG_BaseUncraftableMelee">
+        <defName>PGG_PulseCleaver</defName>
+        <label>pulse cleaver</label>
+        <description>A solid blade imbued with the unstable energy core of its alternate form. While primarily a devastating melee weapon, the Pulse Cleaver can reconfigure its energy matrix to become the Wave Blaster, unleashing energy arcs at a distance.</description>
+        <graphicData>
+     		 <texPath>Things/Item/Equipment/WeaponMelee/PulseCleaver</texPath>
+     		 <graphicClass>Graphic_Single</graphicClass>
+    	</graphicData>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+		<statBases>
+            <Mass>3.0</Mass>
+            <MarketValue>1200</MarketValue>
+            <SellPriceFactor>0.0</SellPriceFactor>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.5</Flammability>
+            <DeteriorationRate>2</DeteriorationRate>
+            <Beauty>-3</Beauty>
+        </statBases>
+		 <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.1</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_WaveBlaster</weapon>
+                         <label>Transform to Blaster</label>
+                        <description>Activate the weapon's transformation sequence to shift into its Wave Blaster form.</description>
+                        <ticksToTransformWeapon>60</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_VoidAnchor</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>true</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>PGG_NightButcher</defName>
+        <label>night butcher</label>
+        <description>A wicked blade that seems to pulse with dark energy. Those who wield it find themselves bound to its power, growing stronger but more unstable.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/NightButcher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Industrial</techLevel>
+        <weaponTags>
+            <li>MeleeWeapon</li>
+        </weaponTags>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <PGG_CursedComponent>2</PGG_CursedComponent>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>PGG_EsotericWeaponry</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <displayPriority>410</displayPriority>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>45000</WorkToMake>
+            <Mass>3.5</Mass>
+            <MarketValue>2200</MarketValue>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>blade</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>24</power>
+                <cooldownTime>2.6</cooldownTime>
+                <armorPenetration>0.36</armorPenetration>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>22</power>
+                <cooldownTime>2.6</cooldownTime>
+                <armorPenetration>0.38</armorPenetration>
+            </li>
+        </tools>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_NightReaper</weapon>
+                        <label>Transform to Reaper</label>
+                        <description>Extend the blade into its reaper form.</description>
+                        <ticksToTransformWeapon>60</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_NightCurse</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>false</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PGG_BaseUncraftableMelee">
+        <defName>PGG_NightReaper</defName>
+        <label>night reaper</label>
+        <description>The extended form of the Night Cleaver. Its longer reach makes it deadlier but more unwieldy.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/NightReaper</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.3</drawSize>
+        </graphicData>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <statBases>
+            <Mass>4.0</Mass>
+            <MarketValue>2200</MarketValue>
+            <VEF_MeleeWeaponRange>2.5</VEF_MeleeWeaponRange>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.15</MoveSpeed>
+        </equippedStatOffsets>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>blade</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>28</power>
+                <cooldownTime>3.0</cooldownTime>
+                <armorPenetration>0.40</armorPenetration>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>26</power>
+                <cooldownTime>3.0</cooldownTime>
+                <armorPenetration>0.42</armorPenetration>
+            </li>
+        </tools>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_NightButcher</weapon>
+                        <label>Transform to Butcher</label>
+                        <description>Retract the blade to its cleaver form for better control.</description>
+                        <ticksToTransformWeapon>60</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_NightCurse</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>false</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>PGG_IchorBlade</defName>
+        <label>ichor blade</label>
+        <description>A blade made from a liquid metal that pulses with internal heat. It seems to bond to the wielder increasing their combat capabilities at the cost of their hunger.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/IchorBlade</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Industrial</techLevel>
+        <weaponTags>
+            <li>MeleeWeapon</li>
+        </weaponTags>
+        <costList>
+            <Steel>75</Steel>
+            <PGG_CursedComponent>2</PGG_CursedComponent>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>PGG_EsotericWeaponry</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+            <displayPriority>410</displayPriority>
+        </recipeMaker>
+        <statBases>
+            <WorkToMake>45000</WorkToMake>
+            <Mass>3.5</Mass>
+            <MarketValue>2200</MarketValue>
+        </statBases>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>blade</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>28</power>
+                <cooldownTime>2.6</cooldownTime>
+                <armorPenetration>0.50</armorPenetration>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>22</power>
+                <cooldownTime>2.6</cooldownTime>
+                <armorPenetration>0.38</armorPenetration>
+            </li>
+        </tools>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_IchorBlaster</weapon>
+                        <label>Transform to Blaster</label>
+                        <description>Morph the blade into its ranged form.</description>
+                        <ticksToTransformWeapon>30</ticksToTransformWeapon>
+                    </li>
+                      <li>
+                        <weapon>PGG_IchorCrusher</weapon>
+                        <label>Transform to Crusher</label>
+                        <description>Morph the blade into its crusher form.</description>
+                        <ticksToTransformWeapon>30</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_Ichorous</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>false</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>PGG_IchorProjectile</defName>
+        <label>ichor projectile</label>
+        <description>A projectile made from liquid metal that pulses with internal heat.</description>
+        <thingClass>Bullet</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/IchorBlob</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Blunt</damageDef>
+            <damageAmountBase>16</damageAmountBase>
+            <stoppingPower>2.5</stoppingPower>
+            <speed>65</speed>
+        </projectile>
+    </ThingDef>
+
+
+    <ThingDef ParentName="PGG_BaseUncraftableRanged">
+        <defName>PGG_IchorBlaster</defName>
+        <label>ichor blaster</label>
+        <description>The ichor weapon morphed into a ranged form, capable of launching dense globs of its liquid metal substance at surprising speed. The substance reconstitutes after impact, allowing the weapon to reform.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/IchorBlaster</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Industrial</techLevel>
+        <statBases>
+            <Mass>3.8</Mass>
+            <MarketValue>2200</MarketValue>
+            <SellPriceFactor>0.0</SellPriceFactor>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>1</DeteriorationRate>
+            <Beauty>-2</Beauty>
+            <AccuracyTouch>0.65</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+        </statBases>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PGG_IchorProjectile</defaultProjectile>
+                <warmupTime>1.8</warmupTime>
+                <range>24</range>
+                <soundCast>Shot_ChargeBlaster</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_IchorBlade</weapon>
+                        <label>Transform to Blade</label>
+                        <description>Morph the weapon into its blade form.</description>
+                        <ticksToTransformWeapon>30</ticksToTransformWeapon>
+                    </li>
+                      <li>
+                        <weapon>PGG_IchorCrusher</weapon>
+                        <label>Transform to Crusher</label>
+                        <description>Morph the weapon into its crusher form.</description>
+                        <ticksToTransformWeapon>30</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_Ichorous</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>false</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PGG_BaseUncraftableMelee">
+        <defName>PGG_IchorCrusher</defName>
+        <label>ichor crusher</label>
+        <description>The ichor weapon shifted into a heavy, blunt form. This dense configuration sacrifices finesse for raw concussive force, capable of crushing armor and bone. Like its other forms, it can morph back into a blade or blaster.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponMelee/IchorCrusher</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>4.5</Mass>
+            <MarketValue>2200</MarketValue>
+            <SellPriceFactor>0.0</SellPriceFactor>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>1</DeteriorationRate>
+            <Beauty>-3</Beauty>
+        </statBases>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_IchorBlade</weapon>
+                        <label>Transform to Blade</label>
+                        <description>Morph the weapon into its blade form.</description>
+                        <ticksToTransformWeapon>30</ticksToTransformWeapon>
+                    </li>
+                    <li>
+                        <weapon>PGG_IchorBlaster</weapon>
+                        <label>Transform to Blaster</label>
+                        <description>Morph the weapon into its ranged form.</description>
+                        <ticksToTransformWeapon>30</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_Ichorous</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>false</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+        <equippedAngleOffset>-65</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2.2</cooldownTime>
+            </li>
+            <li>
+                <label>head</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>35</power>
+                <cooldownTime>3.0</cooldownTime>
+                <armorPenetration>0.45</armorPenetration>
+            </li>
+        </tools>
+    </ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+    <defName>PGG_TeslaBolt</defName>
+    <label>tesla bolt</label>
+    <thingClass>VFEMech.TeslaProjectile</thingClass>
+    <graphicData>
+      <texPath>Projectile/Lightning</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ElectricalBurn</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <speed>150</speed>
+    </projectile>
+    <modExtensions>
+      <li Class="VFEMech.TeslaChainingProps">
+        <bounceRange>10</bounceRange>
+        <maxBounceCount>3</maxBounceCount>
+        <damageDef>Flame</damageDef>
+        <addFire>false</addFire>
+        <targetFriendly>false</targetFriendly>
+        <maxLifetime>15</maxLifetime>
+        <impactSound>BulletImpact_Metal</impactSound>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>PGG_TeslaShockBolt</defName>
+    <label>searing tesla bolt</label>
+    <thingClass>Bullet</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/TeslaShockBolt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>ElectricalBurn</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <stoppingPower>0.3</stoppingPower>
+      <armorPenetrationBase>0.25</armorPenetrationBase>
+      <speed>80</speed>
+       <extraDamages>
+      <li>
+        <def>Flame</def>
+        <amount>1</amount>
+        <chance>0.2</chance>
+      </li>
+    </extraDamages>
+    </projectile>
+
+  </ThingDef> 
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>PGG_VoltaicCannon</defName>
+        <label>voltaic cannon</label>
+        <description>An unstable energy weapon that fires bolts of electricity. Its volatile nature causes minor strain on the wielder. Can be reconfigured into a faster-firing Breaker form.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/VoltaicCannon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <techLevel>Industrial</techLevel>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <WorkToMake>60000</WorkToMake>
+            <Mass>4.0</Mass>
+            <MarketValue>1800</MarketValue>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.70</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>40</Steel>
+            <Plasteel>60</Plasteel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+            <PGG_CursedComponent>3</PGG_CursedComponent>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>PGG_EsotericWeaponry</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+            <displayPriority>430</displayPriority>
+        </recipeMaker>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PGG_TeslaShockBolt</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>28</range>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_VoltaicBreaker</weapon>
+                        <label>Transform to Breaker</label>
+                        <description>Reconfigure the cannon into its high-speed Breaker form.</description>
+                        <ticksToTransformWeapon>60</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_VoltaicStrain</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>true</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="PGG_BaseUncraftableRanged">
+        <defName>PGG_VoltaicBreaker</defName>
+        <label>voltaic breaker</label>
+        <description>The Voltaic Cannon pushed into an unstable, rapid-fire mode. It launches a stream of electrical bolts but takes a heavier toll on the wielder's system.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/VoltaicBreaker</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.1</drawSize>
+        </graphicData>
+        <statBases>
+            <Mass>4.0</Mass>
+            <MarketValue>1800</MarketValue>
+            <SellPriceFactor>0.0</SellPriceFactor>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.65</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>PGG_TeslaBolt</defaultProjectile>
+                <warmupTime>0.9</warmupTime>
+                <range>28</range>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="Pesky.CompProperties_TransformWeapon">
+                <weaponsToTransform>
+                    <li>
+                        <weapon>PGG_VoltaicCannon</weapon>
+                        <label>Transform to Cannon</label>
+                        <description>Reconfigure the weapon back to its standard Cannon form.</description>
+                        <ticksToTransformWeapon>60</ticksToTransformWeapon>
+                    </li>
+                </weaponsToTransform>
+            </li>
+            <li Class="Pesky.CompProperties_WeaponHediff">
+                <hediffs>
+                    <li>
+                        <hediffToApply>PGG_VoltaicOverload</hediffToApply>
+                        <hediffSeverity>1.0</hediffSeverity>
+                        <removeWhenUnequipped>true</removeWhenUnequipped>
+                        <applyOnUnequip>false</applyOnUnequip>
+                    </li>
+                </hediffs>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

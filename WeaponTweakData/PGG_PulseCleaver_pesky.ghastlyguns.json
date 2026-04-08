@@ -1,0 +1,12 @@
+{
+  "TextureModID": "pesky.ghastlyguns",
+  "ItemDefName": "PGG_PulseCleaver",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.3856362,
+  "OffY": 0.217017949,
+  "Rotation": 20.0,
+  "BladeStart": -0.170179546,
+  "BladeEnd": 0.4199844,
+  "MeleeWeaponType": 2
+}

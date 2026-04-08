@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef Name="BaseFireAbility" Abstract="True">
+    <iconPath>UI/Commands/Immolate</iconPath>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <showOnCharacterCard>false</showOnCharacterCard>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFireSpew">
+        <range>9.9</range>
+        <lineWidthEnd>3</lineWidthEnd>
+        <filthDef>Filth_Ash</filthDef>
+        <damAmount>12</damAmount>
+        <canHitFilledCells>true</canHitFilledCells>
+      </li>
+      <li Class="CompProperties_AbilityBurner">
+        <numStreams>15</numStreams>
+        <range>11</range> 
+        <coneSizeDegrees>7.2</coneSizeDegrees>
+        <moteDef>Mote_IncineratorBurst</moteDef>
+        <barrelOffsetDistance>6</barrelOffsetDistance>
+        <sizeReductionDistanceThreshold>8</sizeReductionDistanceThreshold>
+        <lifespanNoise>40</lifespanNoise>
+        <rangeNoise>.4</rangeNoise>
+        <effecterDef>BurnerUsed</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- Hellboar Immolator -->
+  <AbilityDef ParentName="BaseFireAbility">
+    <defName>PGG_HellboarImmolator</defName> 
+    <label>hellboar immolator</label>
+    <description>Expend a pressurized chemfuel charge to create a burst of flame.</description>
+    <ai_IsIncendiary>true</ai_IsIncendiary>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+    <verbProperties>
+      <range>9.9</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>FireSpew_Resolve</soundCast>
+      <flammabilityAttachFireChanceCurve> 
+        <points>
+          <li>(0.2, 0)</li>
+          <li>(1, 1)</li>
+        </points>
+      </flammabilityAttachFireChanceCurve>
+    </verbProperties>
+  </AbilityDef>
+
+</Defs> 

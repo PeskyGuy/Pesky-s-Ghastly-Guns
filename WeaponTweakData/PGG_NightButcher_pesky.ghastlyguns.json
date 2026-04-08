@@ -1,0 +1,11 @@
+{
+  "TextureModID": "pesky.ghastlyguns",
+  "ItemDefName": "PGG_NightButcher",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.199834853,
+  "OffY": -0.06440958,
+  "BladeStart": -0.2328654,
+  "BladeEnd": 0.5862923,
+  "MeleeWeaponType": 16
+}

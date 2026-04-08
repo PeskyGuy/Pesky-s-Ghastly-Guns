@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <EntityCodexEntryDef>
+    <defName>PGG_CursedComponentEntry</defName>
+    <label>cursed component</label>
+    <description>A strange component infused with unsettling energy.</description>
+    <uiIconPath>UI/CodexEntries/CursedComponent</uiIconPath>
+    <category>Basic</category>
+    <linkedThings>
+      <li>PGG_CursedComponent</li>
+    </linkedThings>
+    <discoveredResearchProjects>
+      <li>PGG_EsotericFabrication</li>
+    </discoveredResearchProjects>
+    <orderInCategory>205</orderInCategory>
+  </EntityCodexEntryDef>
+</Defs>

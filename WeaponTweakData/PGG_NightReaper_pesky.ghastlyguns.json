@@ -1,0 +1,14 @@
+{
+  "TextureModID": "pesky.ghastlyguns",
+  "ItemDefName": "PGG_NightReaper",
+  "ItemType": "ThingDef",
+  "ItemTypeNamespace": "Verse",
+  "OffX": 0.490503728,
+  "OffY": 0.275805116,
+  "Rotation": 20.0,
+  "ScaleX": 1.3,
+  "ScaleY": 1.3,
+  "BladeStart": 0.421139568,
+  "BladeEnd": 1.22047889,
+  "MeleeWeaponType": 6
+}

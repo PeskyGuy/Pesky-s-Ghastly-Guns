@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <Pesky.PsychicRitualDef_SummonThing>
+    <defName>PGG_SummonCursedComponentRitual</defName>
+    <label>summon component</label>
+    <description>A dangerous psychic ritual leveraging forbidden knowledge to tear open a rift and pull forth unnatural components from elsewhere. Success is not guaranteed, and the psychic strain can cause lasting mental damage.</description>
+    <iconPath>UI/Icons/Rituals/CursedSummoning</iconPath>
+    <researchPrerequisite>PGG_EsotericFabrication</researchPrerequisite>
+
+    <hoursUntilOutcome>0.5</hoursUntilOutcome>
+    <cooldownHours>144</cooldownHours>
+
+    <invokerRole>Invoker</invokerRole>
+    <chanterRole>Chanter</chanterRole>
+
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Bioferrite</li>
+        </thingDefs>
+      </filter>
+      <count>25</count>
+    </requiredOffering>
+
+    <thingToSummon>PGG_CursedComponent</thingToSummon>
+    <countFromQualityCurve>
+      <points>
+        <li>(0.0, 0)</li>
+        <li>(0.25, 1)</li>
+        <li>(0.75, 2)</li>
+        <li>(1.0, 4)</li>
+      </points>
+    </countFromQualityCurve>
+
+    <backlashChanceFromQualityCurve>
+      <points>
+        <li>(0.0, 0.75)</li>
+        <li>(0.25, 0.40)</li>
+        <li>(0.75, 0.10)</li>
+        <li>(1.0, 0.01)</li>
+      </points>
+    </backlashChanceFromQualityCurve>
+    <backlashHediff>PsychicShock</backlashHediff>
+    <backlashSeverityRange>0.1~0.4</backlashSeverityRange>
+
+    <outcomeDescription>Summons approximately {0} cursed components.\n\nWith the current quality, there's a {1} chance the invoker will suffer psychic backlash.</outcomeDescription>
+
+  </Pesky.PsychicRitualDef_SummonThing>
+
+</Defs> 

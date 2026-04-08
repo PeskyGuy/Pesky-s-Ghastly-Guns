@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+ <ThingDef ParentName="ResourceBase">
+    <defName>PGG_CursedComponent</defName>
+    <label>cursed component</label>
+    <description>A strange component infused with unsettling energy. It seems essential for crafting particularly ghastly armaments. It deteriorates quickly and has an unsettling tendency to draw blood from those who handle it.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/CursedComponent</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>2</Flammability>
+      <DeteriorationRate>100.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <allowedArchonexusCount>15</allowedArchonexusCount>
+  </ThingDef>
+  
+  
+</Defs>

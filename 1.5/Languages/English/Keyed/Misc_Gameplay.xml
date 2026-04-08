@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <PGG_ThingSummoned>{0} x{1} materialized from the void!</PGG_ThingSummoned>
+  <PGG_ThingSummoningFailed>The ritual failed to summon any {0}.</PGG_ThingSummoningFailed>
+  <PGG_ThingSummoningFailed_Placement>The ritual succeeded, but the summoned items could not be placed!</PGG_ThingSummoningFailed_Placement>
+  <PGG_SummoningBacklashSuffered>{PAWN_nameDef} suffered psychic backlash from the summoning ritual!</PGG_SummoningBacklashSuffered>
+
+</LanguageData> 

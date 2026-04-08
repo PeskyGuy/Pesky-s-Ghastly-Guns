@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <ThoughtDef>
+    <defName>PGG_ReapersMadnessThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_ReapersMadness</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>reapers madness</label>
+        <description>The screams... they're everywhere. I need the screams to stop.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>PGG_IchorousThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_Ichorous</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>ichorous</label>
+        <description>I'm so hungry, I feel icky... I need to eat.</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>PGG_DualityConfusion</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_InducedConfusion</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>confused by duality</label>
+        <description>This weapon's internals do not make sense. It makes my head hurt trying to figure it out.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>PGG_VoidResonanceThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_VoidResonance</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>void resonance</label>
+        <description>This weapon... it hums with an energy that isn't quite right. It makes my thoughts echo strangely, but I feel so light on my feet.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>PGG_VoidAnchorThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_VoidAnchor</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>void anchor</label>
+        <description>I feel heavy, but my movements are surer. I'm not sure if I like this.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>PGG_WailingWindThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_Momentum</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>wailing wind</label>
+        <description>I feel like I'm being pulled in a thousand directions at once. It's disorienting.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>PGG_EagleFuryThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_EaglesFury</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>eagle's shriek</label>
+        <description>It fills my head, driving me to violence. Make it stop!</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

@@ -1,0 +1,9 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.GeneratedMSBuildEditorConfig.editorconfig
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.AssemblyInfoInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.AssemblyInfo.cs
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Assemblies\PeskyGhastlyGuns.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Assemblies\PeskyGhastlyGuns.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Debug\PeskyGhastlyGuns.pdb
