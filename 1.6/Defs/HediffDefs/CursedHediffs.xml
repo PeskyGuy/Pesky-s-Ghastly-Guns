@@ -11,6 +11,9 @@
     <maxSeverity>1.0</maxSeverity>
     <isBad>true</isBad>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <stages>
       <li>
         <minSeverity>0.8</minSeverity>
@@ -33,9 +36,12 @@
     <scenarioCanAdd>false</scenarioCanAdd> 
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <comps>
       <li Class="Pesky.HediffCompProperties_SpontaneousCombustion">
-        <mtbDays>0.1</mtbDays>
+        <mtbDays>0.4</mtbDays>
         <fireSize>0.5</fireSize>
       </li>
     </comps>
@@ -83,6 +89,9 @@
     <isBad>true</isBad>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
      <stages>
             <li>
                 <statOffsets>
@@ -105,6 +114,9 @@
         <defaultLabelColor>(0.8, 0.2, 0.2)</defaultLabelColor>
         <maxSeverity>1.0</maxSeverity>
         <everCurableByItem>false</everCurableByItem>
+        <tags>
+          <li>PGG_Curse</li>
+        </tags>
         <stages>
             <li>
                 <statOffsets>
@@ -128,6 +140,9 @@
     <isBad>false</isBad>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <stages>
         <li>
             <minSeverity>0.01</minSeverity>
@@ -150,6 +165,9 @@
     <isBad>true</isBad>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <stages>
         <li>
             <minSeverity>0.01</minSeverity>
@@ -173,6 +191,9 @@
     <isBad>true</isBad>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <stages>
         <li>
             <minSeverity>0.01</minSeverity>
@@ -197,6 +218,9 @@
       <scenarioCanAdd>false</scenarioCanAdd>
       <maxSeverity>1.0</maxSeverity>
       <everCurableByItem>false</everCurableByItem>
+      <tags>
+        <li>PGG_Curse</li>
+      </tags>
       <stages>
           <li>
               <label>active</label>
@@ -224,6 +248,9 @@
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <stages>
       <li>
         <minSeverity>0.01</minSeverity>
@@ -242,6 +269,9 @@
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>0.1</severityPerDay>
@@ -331,6 +361,9 @@
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>0.1</severityPerDay>
@@ -407,6 +440,9 @@
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
     <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
     <stages>
       <li>
         <minSeverity>0.8</minSeverity>

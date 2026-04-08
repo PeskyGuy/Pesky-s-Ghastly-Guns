@@ -4,7 +4,8 @@
     <defName>PGG_EsotericWeaponry</defName>
     <label>esoteric weaponry</label>
     <description>Learn to craft weapons that blur the line between technology and the supernatural.</description>
-    <baseCost>2000</baseCost>
+    <tab>Anomaly</tab>
+    <knowledgeCost>80</knowledgeCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>Gunsmithing</li>
@@ -12,7 +13,6 @@
     </prerequisites>
   <researchViewX>6.00</researchViewX>
   <researchViewY>5.30</researchViewY>
-    <tab>Main</tab>
   </ResearchProjectDef>
 
 <ResearchProjectDef>

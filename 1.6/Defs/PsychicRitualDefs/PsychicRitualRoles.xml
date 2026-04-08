@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PsychicRitualRoleDef>
+    <defName>PGG_UnbindingTarget</defName>
+    <label>target</label>
+    <description>The pawn whose spirit will be cleansed of curses.</description>
+    <allowedCount>1</allowedCount>
+    <allowedConditions>Default, Downed, Prisoner, Sleeping, IdeoUnwilling</allowedConditions>
+    <applyPowerOffset>false</applyPowerOffset>
+    <removeOnLost>false</removeOnLost>
+  </PsychicRitualRoleDef>
+
+</Defs>

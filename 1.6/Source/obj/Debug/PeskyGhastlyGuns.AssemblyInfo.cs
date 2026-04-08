@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PeskyGhastlyGuns")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76cae75a15b51cb8bdc127b45135b4aed3690e85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e4b6c5e0ed37d8326131424777dc0137d31a75b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PeskyGhastlyGuns")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PeskyGhastlyGuns")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
