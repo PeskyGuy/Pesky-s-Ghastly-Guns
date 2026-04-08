@@ -101,4 +101,43 @@
     </stages>
   </ThoughtDef>
 
+  <ThoughtDef>
+    <defName>PGG_ReliquarySoulWhispers</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PGG_ReliquarySouls</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>whispering souls</label>
+        <description>I can hear them... faint whispers from the weapon. It's distracting.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>echoing souls</label>
+        <description>The whispers are getting louder, more distinct. They know my name.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <li>
+        <label>wailing souls</label>
+        <description>The souls are wailing in agony. Their pain is becoming my own.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+      <li>
+        <label>screaming souls</label>
+        <description>Constant screaming in my mind! I can't concentrate on anything else.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+      <li>
+        <label>shattering souls</label>
+        <description>My mind is breaking under the weight of a thousand damned souls!</description>
+        <baseMoodEffect>-28</baseMoodEffect>
+      </li>
+      <li>
+        <label>damned souls</label>
+        <description>I am one with the damned. There is no hope, only the abyss.</description>
+        <baseMoodEffect>-45</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
 </Defs>

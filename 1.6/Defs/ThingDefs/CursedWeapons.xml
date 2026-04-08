@@ -97,7 +97,7 @@
             <removeWhenUnequipped>true</removeWhenUnequipped>
             <applyOnUnequip>false</applyOnUnequip>
           </li>
-           <li>
+          <li>
             <hediffToApply>PGG_ReapersMadness</hediffToApply>
             <hediffSeverity>1.0</hediffSeverity>
             <removeWhenUnequipped>false</removeWhenUnequipped>
@@ -559,5 +559,92 @@
             </li>
         </comps>
     </ThingDef>
-    
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Reliquary</defName>
+    <label>reliquary bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(100, 255, 100)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>90</speed>
+      <armorPenetrationBase>0.50</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>PGG_Reliquary</defName>
+    <label>the reliquary</label>
+    <description>A modern precision rifle wrapped in heavy chains and ritualistic bindings. A glowing green lantern is attached to the underbarrel, acting as a vessel for the souls of the damned. As it harvests more souls, it grants the wielder supernatural accuracy and focus, but at the cost of intense psychic pain and instability.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Reliquary</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.1</drawSize>
+    </graphicData>
+    <equippedAngleOffset>60</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4.5</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>80</Steel>
+      <Plasteel>30</Plasteel>
+      <Gold>15</Gold>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <PGG_CursedComponent>4</PGG_CursedComponent>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>PGG_EsotericWeaponry</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>450</displayPriority>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Reliquary</defaultProjectile>
+        <warmupTime>1.8</warmupTime>
+        <range>42</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Pesky.CompProperties_WeaponHediff">
+        <hediffs>
+          <li>
+            <hediffToApply>PGG_ReliquaryCurse</hediffToApply>
+            <hediffSeverity>1.0</hediffSeverity>
+            <removeWhenUnequipped>false</removeWhenUnequipped>
+          </li>
+        </hediffs>
+      </li>
+      <li Class="Pesky.CompProperties_Reliquary" />
+      <li Class="CompProperties_EquippableAbility">
+        <abilityDef>PGG_Exorcise</abilityDef>
+      </li>
+    </comps>
+    <weaponTags>
+        <li>Gun</li>
+        <li>SniperRifle</li>
+    </weaponTags>
+  </ThingDef>
+
 </Defs>

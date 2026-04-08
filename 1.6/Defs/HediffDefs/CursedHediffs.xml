@@ -463,4 +463,121 @@
     </stages>
   </HediffDef>
 
+  <HediffDef>
+    <defName>PGG_ReliquarySouls</defName>
+    <label>reliquary souls</label>
+    <description>The Reliquary is channeling the souls of the damned through the wielder. This grants supernatural combat focus but strains the mind and body with every life taken.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>20</maxSeverity>
+    <defaultLabelColor>(0.0, 0.9, 0.6)</defaultLabelColor>
+    <isBad>true</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>whispering</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>4</minSeverity>
+        <label>echoing</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+          <PsychicSensitivity>0.15</PsychicSensitivity>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>8</minSeverity>
+        <label>wailing</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+          <PsychicSensitivity>0.30</PsychicSensitivity>
+          <AimingDelayFactor>-0.10</AimingDelayFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.03</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>12</minSeverity>
+        <label>screaming</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+          <PsychicSensitivity>0.50</PsychicSensitivity>
+          <AimingDelayFactor>-0.20</AimingDelayFactor>
+          <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+        </statOffsets>
+        <painOffset>0.20</painOffset>
+      </li>
+      <li>
+        <minSeverity>16</minSeverity>
+        <label>shattering</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>15</ShootingAccuracyPawn>
+          <PsychicSensitivity>0.80</PsychicSensitivity>
+          <AimingDelayFactor>-0.30</AimingDelayFactor>
+          <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+        </statOffsets>
+        <painOffset>0.40</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.08</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>20</minSeverity>
+        <label>damned</label>
+        <statOffsets>
+          <ShootingAccuracyPawn>25</ShootingAccuracyPawn>
+          <PsychicSensitivity>1.5</PsychicSensitivity>
+          <AimingDelayFactor>-0.50</AimingDelayFactor>
+          <ArmorRating_Sharp>0.45</ArmorRating_Sharp>
+        </statOffsets>
+        <painOffset>0.75</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <HediffDef>
+    <defName>PGG_ReliquaryCurse</defName>
+    <label>reliquary's weight</label>
+    <description>A permanent spiritual tether formed between the wielder and the Reliquary. The voices of those trapped within now echo in their soul forever, making them more receptive to the psychic realm but also more vulnerable to its terrors.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.0, 0.9, 0.6)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>true</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <tags>
+      <li>PGG_Curse</li>
+    </tags>
+    <stages>
+      <li>
+        <statOffsets>
+          <PsychicSensitivity>0.30</PsychicSensitivity>
+          <MentalBreakThreshold>0.05</MentalBreakThreshold>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+
 </Defs>

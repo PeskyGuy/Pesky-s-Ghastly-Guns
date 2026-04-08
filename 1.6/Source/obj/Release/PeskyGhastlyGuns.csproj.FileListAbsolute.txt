@@ -1,0 +1,10 @@
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.csproj.AssemblyReference.cache
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.GeneratedMSBuildEditorConfig.editorconfig
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.AssemblyInfoInputs.cache
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.AssemblyInfo.cs
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.csproj.CoreCompileInputs.cache
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.sourcelink.json
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Assemblies\PeskyGhastlyGuns.dll
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Assemblies\PeskyGhastlyGuns.pdb
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.dll
+f:\Coding\Mods\Pesky's Ghastly Guns\1.6\Source\obj\Release\PeskyGhastlyGuns.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj": {}
+    "f:\\Coding\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj": {}
   },
   "projects": {
-    "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj": {
+    "f:\\Coding\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj",
+        "projectUniqueName": "f:\\Coding\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj",
         "projectName": "PeskyGhastlyGuns",
-        "projectPath": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj",
+        "projectPath": "f:\\Coding\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\PeskyGhastlyGuns.csproj",
         "packagesPath": "C:\\Users\\Pesky\\.nuget\\packages\\",
-        "outputPath": "D:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\obj\\",
+        "outputPath": "f:\\Coding\\Mods\\Pesky's Ghastly Guns\\1.6\\Source\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pesky\\AppData\\Roaming\\NuGet\\NuGet.Config"

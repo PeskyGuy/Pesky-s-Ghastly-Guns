@@ -48,4 +48,29 @@
 
   </Pesky.PsychicRitualDef_SummonThing>
 
-</Defs> 
+  <Pesky.PsychicRitualDef_RemoveCurses>
+    <defName>PGG_UnbindingRitual</defName>
+    <label>unbinding ritual</label>
+    <description>A psychic ritual designed to sever the ethereal ties of cursed manifestations. By channeling focused psychic energy through a target, the ritual can dissolve unnatural brands and mental strains left by ghastly weapons.</description>
+    <iconPath>UI/Icons/Rituals/UnbindingCurse</iconPath>
+    <researchPrerequisite>PGG_EsotericFabrication</researchPrerequisite>
+
+    <hoursUntilOutcome>0.5</hoursUntilOutcome>
+    <cooldownHours>48</cooldownHours>
+
+    <invokerRole>Invoker</invokerRole>
+    <targetRole>PGG_UnbindingTarget</targetRole>
+
+    <requiredOffering>
+      <filter>
+        <thingDefs>
+          <li>Shard</li>
+        </thingDefs>
+      </filter>
+      <count>1</count>
+    </requiredOffering>
+
+    <outcomeDescription>The ritual channels focused psychic energy to dissolve unnatural brands and mental strains. The spirit-cleansing weave will attempt to purge all ghastly curses from the target, though the process requires intense concentration and an archotech shard to anchor the soul.</outcomeDescription>
+  </Pesky.PsychicRitualDef_RemoveCurses>
+
+</Defs>

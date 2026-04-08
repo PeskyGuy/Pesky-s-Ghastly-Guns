@@ -8,5 +8,7 @@
   <PGG_HellboarCombustion>{0} has spontaneously ignited from the Hellfire Brand!</PGG_HellboarCombustion>
   <PGG_CursesRemoved>{0}'s spirit has been cleansed of {1} curses.</PGG_CursesRemoved>
   <PGG_NoCursesFound>The ritual was completed, but no curses were found on {0}.</PGG_NoCursesFound>
+  <PGG_ReliquarySoulCaptured>A soul has been trapped within the Reliquary.</PGG_ReliquarySoulCaptured>
+  <PGG_ReliquaryExorcised>The Reliquary has been purged of its captured souls!</PGG_ReliquaryExorcised>
 
 </LanguageData> 

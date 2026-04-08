@@ -55,4 +55,29 @@
     </verbProperties>
   </AbilityDef>
 
+  <AbilityDef>
+    <defName>PGG_Exorcise</defName>
+    <label>exorcise souls</label>
+    <description>Forcefully eject all captured souls from the Reliquary in a single psychic blast. The more souls stored, the more devastating the explosion. This clears the weapon's soul count and the wielder's curse.</description>
+    <iconPath>UI/Commands/Exorcise</iconPath>
+    <cooldownTicksRange>3600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>1.5</warmupTime>
+      <range>25</range>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+      <soundCast>PsycastPsychicPulse</soundCast>
+    </verbProperties>
+    <comps>
+      <li Class="Pesky.CompProperties_AbilityExorcise">
+        <baseDamage>15</baseDamage>
+        <damagePerSoul>5</damagePerSoul>
+      </li>
+    </comps>
+  </AbilityDef>
+
 </Defs> 
